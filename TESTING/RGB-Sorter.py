@@ -1,17 +1,21 @@
+import os
+
+L=os.listdir(os.path.join('C:\Personal\A-Inbox\FC\Jup\Jup_2018_01_20\AS_f2000\VerL'))
+
 for f in L:
-	if '-B-' in f:
-		if '-R-' in L[L.index(myNumber)-1]:
-			RED = L[L.index(myNumber)-1]
-		else:
-			RED = ''
-		if '-G-' in L[L.index(myNumber)+1]:
-			GREEN = L[L.index(myNumber)+1]
-		else:
-			GREEN = ''
-	print 'RED = '+RED
-	print 'GREEN = 'GREEN
-	print 'BLUE = '+f
-	print ''
+        if '-B-' in f:
+                if '-R-' in L[L.index(f)-1]:
+                        RED = L[L.index(f)-1]
+                else:
+                        RED = ''
+                if '-G-' in L[L.index(f)+1]:
+                        GREEN = L[L.index(f)+1]
+                else:
+                        GREEN = ''
+                print 'RED = '+RED
+                print 'GREEN = '+GREEN
+                print 'BLUE = '+f
+                print ''
 
 
 
